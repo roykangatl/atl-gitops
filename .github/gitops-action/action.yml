@@ -19,7 +19,7 @@ runs:
      uses: actions/checkout@v4
 
     -name: Make script executable
-    run: chmod +x ./.github/scripts/backend/_decrypt.sh
+    run: chmod +x ./gitops.sh
     - name: Install fleetctl
       shell: bash
       working-directory: ${{ inputs.working-directory }}
