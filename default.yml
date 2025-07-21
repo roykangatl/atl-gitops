@@ -21,7 +21,7 @@ org_settings:
   webhook_settings:
     activities_webhook:
       enable_activities_webhook: true
-      destiniation_url: https://example.com
+      destination_url: https://example.com
   org_info:
     org_name: Fleet
   secrets:
