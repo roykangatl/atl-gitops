@@ -1,0 +1,3 @@
+name: dns-resolvers.policies.yml
+policies:
+  - path: ../lib/macos/policies/dns-resolvers.policies.yml
