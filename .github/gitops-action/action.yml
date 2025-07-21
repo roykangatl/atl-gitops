@@ -15,6 +15,11 @@ inputs:
 runs:
   using: "composite"
   steps:
+    -name: Checkout code
+     uses: actions/checkout@v4
+
+    -name: Make script executable
+    run: chmod +x ./.github/scripts/backend/_decrypt.sh
     - name: Install fleetctl
       shell: bash
       working-directory: ${{ inputs.working-directory }}
