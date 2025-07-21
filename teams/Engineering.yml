@@ -8,10 +8,10 @@
 # The secret name in the YAML file must match the secret name in GitHub Actions secrets.
 
 name: Engineering
-policies:
   - path: ../lib/macos/policies/macos-device-health.policies.yml
   - path: ../lib/windows/policies/windows-device-health.policies.yml
   - path: ../lib/linux/policies/linux-device-health.policies.yml
+  - path: ../lib/windows/policies/all-windows-updates-installed.policies.yml
 queries:
   - path: ../lib/all/queries/collect-usb-devices.queries.yml
   - path: ../lib/all/queries/collect-failed-login-attempts.queries.yml
@@ -22,6 +22,12 @@ controls:
     - path: ../lib/macos/scripts/remove-zoom-artifacts.script.sh
     - path: ../lib/macos/scripts/set-timezone.script.sh
 team_settings:
+  webhook_settings:
+    failing_policies_webhook:
+      enable_failing_policies_webhook: true
+      destination_url: https://example.org/webhook_handler
+      host_batch_size: 0
+      policy_ids:
   secrets:
     - secret: "$FLEET_ENGINEERING_ENROLL_SECRET"
   features:
