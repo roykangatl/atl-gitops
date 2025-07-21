@@ -8,6 +8,7 @@
 # The secret name in the YAML file must match the secret name in GitHub Actions secrets.
 
 name: Engineering
+  - path: ../lib/macos/policies/macos-device-health.policies.yml
   - path: ../lib/windows/policies/windows-device-health.policies.yml
   - path: ../lib/linux/policies/linux-device-health.policies.yml
   - path: ../lib/windows/policies/all-windows-updates-installed.policies.yml
