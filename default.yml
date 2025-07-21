@@ -20,8 +20,8 @@ org_settings:
     host_expiry_window: 30
   webhook_settings:
     activities_webhook:
-    enable_activities_webhook: true
-    destiniation_url: https://example.com
+      enable_activities_webhook: true
+      destiniation_url: https://example.com
   org_info:
     org_name: Fleet
   secrets:
